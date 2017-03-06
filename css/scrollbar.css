@@ -1,0 +1,42 @@
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: none;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+  background: #3b3c3d;
+  border: none;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+
+@media only screen and (min-width: 670px) and (max-width: 1223px) {
+    ::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+
+}
+
+
+@media only screen and (min-width : 1224px) {
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+}

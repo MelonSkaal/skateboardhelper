@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Skateboarduppsättaren</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+        <link href="css/skatestyle.css" type="text/css" rel="stylesheet">
+        <link href="css/scrollbar.css" type="text/css" rel="stylesheet">
+        <link rel="shortcut icon" href="/img/skateicon.ico" type="image/x-icon"/>
+        
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+        <script src="js/skatescript.js" type="text/javascript"></script>
+        <script src="js/smooth.js" type="text/javascript"></script>
+        <script src="js/jquery.interactive_bg.min.js" type="text/javascript"></script>
+    </head>
+
+    <body class="no-hover">
+        <div id="loading">
+            <div class="loading-icon"></div>
+        </div>
+        
+        <div class="back-blur skater-picture"></div>
+        <!--=========================== MENY ==============================-->
+        <nav>
+            <!-- Loggan och Exit -->
+            <div class="logo-concon">
+                <div class="logo-container">
+                    <div id="logo" class="transition"></div>
+                </div>
+            </div>
+            
+            <!------------------------- Menyn ----------------------------->
+            <section class="menu transition">
+                <!-- Uppsättaren -->
+                <div data-title="start-sida" class="menu-option">
+                    <h2 class="menu-title blend selected-title start-sida2">Uppsättaren</h2>
+                    <div class="dot-container">
+                        <div class="start-sida menu-dot selected-dot animated-dot"></div>
+                    </div>
+                </div>
+                <!-- Information -->
+                <div data-title="information-sida" class="menu-option option-2">
+                    <h2 class="menu-title anchor information-sida2">Information</h2>
+                    <div class="dot-container">
+                        <div class="information-sida menu-dot"></div>
+                    </div>
+                </div>
+                <!-- Om sidan -->
+                <div data-title="om-sida" class="menu-option">
+                    <h2 class="menu-title om-sida2">Om sidan</h2>
+                    <div class="dot-container">
+                        <div class="om-sida menu-dot"></div>
+                    </div>
+                </div>
+            </section>
+        </nav>
+        
+        <!--========================= STARTSIDA ============================-->
+        
+        <section id="start-sida" class="page active">
+            <!-------------------------Knappen----------------------------->
+            <section id="button-page">
+                <div class="title-container"> 
+                    <h2 class="svara title show-mobile hide-desktop transition">— Uppsättaren —</h2>
+                </div>
+                <p class="info-text first-text desktop-info transition">Få reda på vilka skateboarddelar och inställningar som passar dig!</p>
+                <p class="hidden">Att klicka på en undersida avbryter inte frågesessionen</p>
+                <!-- Knappen -->
+                <div class="window">
+                    <section id="starta-knapp" class="button">
+                        <div class="start skater-picture bg" data-ibg-bg=""></div>            
+                        <div class="shine skater-picture"></div>
+                        <h1 id="starta">Starta</h1>
+                    </section>
+                </div>                
+            </section>          
+            <!--------------------------Frågor---------------------------->
+            <section id="frågor" class="hidden">
+                <!-- Exit -->
+                <div class="logo-concon left">
+                    <div id="exit-icon" class="logo-container not-visible">
+                        <div id="exit" class="center"></div>
+                    </div>
+                </div>
+                
+                <!--||||||||||||||||||| AVSLUTA |||||||||||||||||||||-->
+                <section id="quit-page" class="hidden">
+                    <div class="title-container"> 
+                        <h2 class="title">— Avsluta —</h2>
+                    </div> 
+
+                    <section id="question-quit" class="info flip">
+                        <p class="info-text">?Vill du verkligen avsluta</p>
+                        <div class="info-container landscape-center center">
+                            
+                            <div class="quit question" data-value="yes">
+                                <h2 class="center-height">Ja</h2>
+                            </div>
+                            
+                            <div class="quit q2 question" data-value="no">
+                                <h2 class="center-height">Nej</h2>
+                            </div>
+                        </div>
+                    </section> 
+                </section>
+                
+                <section id="questions-and-skateboard">
+                    <!--||||||||||||||||||| FRÅGA |||||||||||||||||||||-->
+                    <section id="inner-questions">
+                        <div class="title-container"> 
+                            <div class="logo-concon middle">
+                                <div class="logo-container float-left">
+                                    <div id="left-arrow" class="arrow center"></div>                            
+                                </div>
+                                <div class="logo-container deg180">
+                                    <div id="right-arrow" class="arrow center"></div>         
+                                </div>
+                                <h2 id="question-title" class="title">Fråga 1</h2>
+                                <p class="question-undertitle info-text">Vad föredrar du?</p>
+                            </div>
+                        </div>        
+
+                        <section id="question-one" class="info flip question-page">
+                            <p class="question-undertitle undertitle2" class="info-text">Vad föredrar du?</p>
+                            
+                            <div class=" svara-container landscape-center center">
+                                <div class="q-holder q1">
+                                    <div class="question value-1" data-value="tricks" data-info="button1">
+                                        <h2 class="center-height switch-question answer-1">Göra tricks</h2>
+                                    </div>
+                                    <div class="triangle">
+                                        <div id="info1" class="hitbox button1">
+                                            <div class="deg45 info-1"></div>
+                                            <div class="info-icon jump info-1"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="q-holder">
+                                    <div class="question value-2" data-value="cityriding" data-info="button2">
+                                        <h2 class="center-height switch-question answer-2">Stadsåkning</h2>
+                                    </div> 
+                                    <div class="triangle">
+                                        <div class="hitbox button2">
+                                            <div class="deg45 info-2"></div>
+                                            <div class="info-icon jump info-2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Gömd information -->
+                                <div class="q-holder hidden hidden-info info-click">
+                                    <h2 id="info-title"></h2>
+                                    <p></p>
+                                    <div class="triangle">
+                                        <div class="hitbox close-icon">
+                                            <div class="deg45 info-3"></div>
+                                            <div class="info-icon info-close info-3"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bottom-container">
+                                <p class="question-undertitle2 info-text">(Undersidor är tillgängliga under frågeprocessen)</p>
+                            </div>
+                        </section>
+                    </section>
+
+                    <!--||||||||||||| SKATEBOARD |||||||||||||||||-->
+                    <section id="skateboard-page" class="hidden">
+                        <div class="title-container"> 
+                            <h2 id="question-title" class="title">Din skateboard</h2>
+                        </div>  
+                        
+                        <section class="info2 flip question-page">
+                            <p id="reset-scroll" class="info-text flip2">Dessa delar/inställningar rekommenderas för dig!<br>(Tryck på ikonerna för exempel)</p>
+                            
+                            <div class="skateboard">
+                                <div class="question2 dotted">
+                                    <a id="a1" target="_blank" href="#">
+                                        <div class="bubble center board-picture"></div>
+                                    </a>
+                                    <div class="bubble-text-container">
+                                        <h2>Brädtyp</h2>
+                                        <p class="b1"></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="question2 mirror">
+                                    <a id="a2" target="_blank" href="#">
+                                        <div class="bubble center grip-picture"></div>
+                                    </a>
+                                    <div class="bubble-text-container">
+                                        <h2>Griptape</h2>
+                                        <p class="b2"></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="question2 dotted">
+                                    <a id="a3" target="_blank" href="#">
+                                        <div class="bubble center truck-picture"></div>
+                                    </a>
+                                    <div class="bubble-text-container">
+                                        <h2>Truckar</h2>
+                                        <p class="b3"></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="question2 mirror">
+                                    <a id="a4" target="_blank" href="#">
+                                        <div class="bubble center wheel-picture"></div>
+                                    </a>
+                                    <div class="bubble-text-container">
+                                        <h2>Hjul</h2>
+                                        <p class="b4"></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="question2 dotted">
+                                    <a id="a5" target="_blank" href="#">
+                                        <div class="bubble center bearing-picture"></div>
+                                    </a>
+                                    <div class="bubble-text-container">
+                                        <h2>Kullager</h2>
+                                        <p class="b5"></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="question2 mirror">
+                                    <a id="a6" target="_blank" href="#">
+                                        <div class="bubble center screw-picture"></div>
+                                    </a>
+                                    <div class="bubble-text-container">
+                                        <h2>Skruvar</h2>
+                                        <p class="b6"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <table>
+                                <tr>
+                                    <th class=" border-bottom border-top">Ungefärligt pris</th>
+                                    <th class="border-bottom border-top"></th>
+                                </tr>
+                                <tr>
+                                    <td class="border-right">Brädtyp</td>
+                                    <td id="t1"></td>
+                                </tr>
+                                <tr>
+                                    <td class="border-right">Griptape</td>
+                                    <td id="t2"></td>
+                                </tr>
+                                <tr>
+                                    <td class="border-right">Truckar</td>
+                                    <td id="t3"></td>
+                                </tr>
+                                <tr>
+                                    <td class="border-right">Hjul</td>
+                                    <td id="t4"></td>
+                                </tr>
+                                <tr>
+                                    <td class="border-right">Kullager</td>
+                                    <td id="t5"></td>
+                                </tr>
+                                <tr>
+                                    <td class="border-right">Skruvar</td>
+                                    <td id="t6"></td>
+                                </tr>
+                                <tr>
+                                    <th class="border-right border-top border-bottom">Beräknad kostnad</th>
+                                    <th id="t7" class="border-top border-bottom">2000kr</th>
+                                </tr>
+                            </table>
+                            <p id="summary" class="flip2"></p>
+                            <p id="extra-info" class="info-text flip2"></p>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </section>
+
+        <!--========================= INFORMATION ==========================-->
+
+        <section id="information-sida" class="page hidden ">
+            <div class="title-container"> 
+                <h2 class="title show-mobile hide-desktop transition">— Information —</h2>
+            </div>
+
+            <section class="info flip transition desktop-info">
+                <div class="info-container">
+                    <section>
+                        <p class="info-text">Information om begrepp som kan stötas på</p>
+                        <article class="durometer">
+                            <h2>Durometer</h2>
+                            <p>Durometern är hårdheten på hjulen. En högre durometer betyder att hjulet är hårdare än ett hjul med lägre durometer. De flesta skateboardhjulen mäts på durometerns A-skala som går upp till 100a. Hårdare hjul mäts ofta i B-skalan, som lägger till 20 nivåer av hårdhet på A-skalan. Hårdet 80b motsvarar alltså 100a (warehouseskateboards.com). Mjuka hjul ger lägre hastigheter men bättre grepp än hårda hjul, eftersom mycket av rörelseenergin absorberas av hjulen. Hårda hjul är mindre mottagliga för <a href="#flatspot" data-link="flatspot" class="link">flatspots</a>.</p>
+                        </article>
+
+                        <article class="hardness">
+                            <h2>Hårdhet på truckar</h2>
+                            <p>Hårdheten på truckarna avgörs på hur hårt truckens mutter är åtskruvad. En mer hårt åtskruvad mutter leder till en hårdare truck och vise versa. Truckarna bör inte vara så lösa att <a href="#wheelbite" data-link="wheelbite" class="link">wheelbite</a> inträffar regelbundet</p>
+                        </article>
+
+                        <article class="svängradie">  
+                            <h2>Svängradie</h2>
+                            <p>Svängradien beskriver hur skarpa svängar som kan göras när maximal vikt läggs på ena sidan av skateboarden. Lösare truckar leder till en skarpare svängradie och vise versa.</p>
+                        </article>
+                        
+                        <a name="wobble"></a>
+                        <article class="wobble">
+                            <h2>Wobble</h2>
+                            <p>Wobble kan uppstå när truckarna är väldigt lösa och hastigheten är väldigt hög. Detta beror på att sträckan man åker åt höger och vänster är blir längre när farten ökar.</p>
+                        </article>
+
+                        <article class="abec">
+                            <h2>Abec</h2>
+                            <p>Abec är beteckningen på hur hög temperatur och hastighet ett kullager kan klara av. Abec 7 tål högre värme och hastighet än vad Abec 5 gör.</p>
+                        </article>
+
+                        <article class="wheelbite">
+                            <h2>Wheelbite</h2>
+                            <p>Wheelbite betyder att något eller några av hjulen tar i skateboarden när man rullar, vilket leder till ett abrupt stopp. Inträffar ofta då truckarna är för lösa, eller vid impact av streetåkning. Även hårda truckar kan då leda till wheelbite när mycket kraft läggs på skateboardens ena sida.</p>
+                        </article>
+                        
+                        <article class="flatspot">
+                            <h2>Flatspot</h2>
+                            <p>Ett flatspot kan uppstå på ett eller flera hjul när de glider över marken väldigt hårt, ofta vid powerslides. Det slits då bort en del av hjulet/hjulen vilket bildar en platt yta. Detta kan leda till lägre hastigheter och ett ljud som många finner irriterande. <a target="_blank" href="https://youtu.be/2hyMvaX5ey0?t=1m25s" class="link">Exempel på ett flatspot</a>.</p>
+                        </article>
+                    </section>
+                </div>
+            </section>
+        </section>
+
+        <!--=========================== OM SIDAN ===========================-->
+
+        <section id="om-sida" class="page hidden ">
+            <div class="title-container"> 
+                <h2 class="title show-mobile hide-desktop transition">— Om sidan —</h2>
+            </div>
+
+            <section class="info flip transition desktop-info">
+                <div class="info-container2">
+                    <p class="info-text">Personer som ligger bakom hemsidan</p>
+                    <article>
+                        <h2>Skapare</h2>
+                        <p>Alexander Mattsson, åkt skateboard sedan 2009.<br><br>- Jag har progressivt genom åren ändrat min skateboarduppsättning och haft många olika typer av brädor. Tanken bakom hemsidan är att jag känner att det kan vara nyttigt med ett verktyg som hjälper nybörjare att sätta ihop sina första skateboards.</p>
+                    </article>
+
+                    <article>
+                        <h2>Personer som har hjälpt</h2>
+                        <p>Elisa Keskikallio | Åsikter och formulerande av frågor<br>Eric Zakariasson | Lite CSS och JS<br>Dennis Lidzén | Indirekt genom års av skejtande<br>Victor Karlsson | Indirekt genom års av skejtande<br>Mattis Hallberg | Indirekt genom års av skejtande<br>Espen Huser | Genomgångar och bedömningar<br>Linn Nilsson | Genomgångar</p>
+                    </article>
+                     
+                    <article>
+                        <h2>Källor</h2>
+                        <p><i>Durometer:</i> <a target="_blank" class="link" href="https://www.warehouseskateboards.com/help/Skateboard-Wheels-Buying-Guide">warehouseskateboards.com/help/Skateboard-Wheels-Buying-Guide</a><br>
+                        <i>Övrig information:</i> Alexander Mattsson (2017)</p>
+                    </article>
+                    
+                    <article>
+                        <h2>Ikoner och Animation</h2>
+                        <p>Ikoner:<br>
+                            <a target="_blank" class="cred" href="https://thenounproject.com/term/close/612301/">Close | Elena Rimeikaite</a><br>
+                        <a target="_blank" class="cred" href="https://thenounproject.com/term/paper/127452/">Paper | Sergey Demushkin</a><br>
+                        <a target="_blank" class="cred" href="https://thenounproject.com/term/bearing/355139/">Bearing | luism</a><br>
+                        <a target="_blank" class="cred" href="https://thenounproject.com/term/bolt/634885/">Bolt | Artem Kovyazin</a><br>
+                        <a target="_blank" class="cred" href="https://thenounproject.com/term/skateboard-wheel/249086/">Skateboard Wheel | Fernando Affonso</a><br>
+                        <a target="_blank" class="cred" href="https://thenounproject.com/term/skateboard-truck/74974/">Skateboard Truck | Chad Totaro</a><br>
+                        <a target="_blank" class="cred" href="https://thenounproject.com/term/skateboard/643124/">Skateboard | Ts Graphics</a><br>
+                        <a target="_blank" class="cred" href="https://thenounproject.com/term/close/91466/">Close | Thomas Drach</a><br>
+                        <a target="_blank" class="cred" href="https://thenounproject.com/term/info/89791/">Info | Tahsin Tahil</a><br>
+                        <br>
+                            
+                        SVG animation:<br>
+                        <a target="_blank" class="cred" href="http://samherbert.net/svg-loaders/">http://samherbert.net/svg-loaders/</a><br>
+                        <br>
+                        Creative Commons:<br>
+                        <a target="_blank" class="cred" href="https://creativecommons.org/licenses/by/3.0/us/">licenses/by/3.0/us/</a><br>
+                    </article>
+                    
+                    <article>
+                        <hr><br>
+                        <p class="text-align">Skateboarduppsättaren | © Alexander Mattsson 2017</p>  
+                    </article>
+                </div>
+            </section>
+        </section>
+    </body>
+</html>
